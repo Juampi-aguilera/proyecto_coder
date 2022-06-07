@@ -7,7 +7,7 @@
     src: url(fonts/DancingScript-Regular.ttf);
 }
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -70,6 +70,13 @@ nav ul li{
     cursor: pointer;
     font-size: 16px;
     margin-right: 5px;
+    transition: all .3s;
+}
+.btn:hover{
+    color: #184B47;
+    background-color: white;
+    border: 2px solid white;
+    font-weight: 500;
 }
 .menu-burguer{
     margin-right: 90px;
@@ -143,7 +150,7 @@ p{
 }
 .formacion{
     text-align: justify;
-    font-family:'Zen Loop', cursive;
+    font-family: cursive;
     width:60%;
     font-size: 25px;
 }
@@ -409,12 +416,22 @@ svg{
     
     /* index */
     
+    .titulo__index h1{
+        font-size: 50px;
+    }
+    .titulo__index h2{
+        font-size: 25px;
+    }
     .section__index{
         margin: 20px 30px;
     }
     .formacion{
         width:90%;
         font-size: 20px;
+    }
+
+    .presentacion p{
+        font-size: 23px;
     }
 
     /* sobre mi */
