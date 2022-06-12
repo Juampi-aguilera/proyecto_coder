@@ -16,72 +16,56 @@ body{
     background-color: #FFF1CE;
     /* padding para que que se ajuste al nav */
     padding-top: 81px;
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
 }
 /* barra nav del menu */
-
-header{
-    grid-area: header;
-}
 
 nav{
     background-color: #184B47;
     font-size: 20px;
     padding: 18px;
-    position:fixed;
-	top:0;
-    width: 100%;
-    height: 45px;
-    display: grid;
-    align-content: center;
-    z-index: 1000;
+    height: 81px;
+
+    /* z-index: 1000; */
 }
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+
+.menu-desplegable{
+    background-color: #184B47;
 }
-nav ul li{
-    display: inline-block;
-}
-.logo{
-    height: fit-content;
-    align-self: center;
+
+.navbar-brand{
     margin-left: 120px;
-    flex-wrap: nowrap;
-}
-.logo a{
-    text-decoration: none;
     color: #FFF1CE;
 }
-.link__page{
-    margin-right: 90px;
+
+.navbar-brand:hover{
+    color: #FFF1CE;
 }
-.btn{
+
+.navbar-nav{
+    margin-right: 70px;
+}
+
+.nav-link{
     height: 45px;
     width: 190px;
     background: none;
     border: 2px solid;
     color: white;
-    cursor: pointer;
+    text-align: center;
     font-size: 16px;
-    margin-right: 5px;
+    margin-right: 9px;
     transition: all .3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.btn:hover{
+
+.nav-link:hover{
     color: #184B47;
     background-color: white;
     border: 2px solid white;
     font-weight: 500;
 }
-.menu-burguer{
-    margin-right: 90px;
-}
-
 
 /* main */
 
@@ -104,17 +88,18 @@ p{
     padding-top: 40px;
     border-radius: 10px;
     background-color: #C4AB7F;
+    font-weight: 600;
 }
+
 /* index */
+
 .titulo__index{
     background-image: url(./image/fondo.jpg);
     background-position: top;
     background-size: cover;
-    padding-top: 10px;
+    padding-top: 70px;
     padding-left: 20px;
     padding-bottom: 250px;
-    margin-top: 0%;
-
 }
 .titulo__index h1{
     font-size: 80px;
@@ -123,9 +108,11 @@ p{
     text-align: left;
 }
 .titulo__index h2{
+    padding-top: 60px;
     font-size: 35px;
     word-spacing:5px;
-    margin-left: 8px;
+    margin-left: 10px;
+    font-weight: 500;
 }
 .presentacion{
     grid-area: presentacion;
@@ -139,6 +126,7 @@ p{
     padding: 30px;
     background-color: #E4DFDF;
     border: #3D5145 4px solid;
+    line-height: 1.2;
 }
 
 .section__index{
@@ -184,14 +172,9 @@ p{
 /* servicios */
 
 .titulo__principal--servicios{
-    text-align: center;
-    margin: 80px;
     margin-bottom: 50px;
-    margin-top: 40px;
     padding: 30px;
     padding-top: 25px;
-    border-radius: 10px;
-    background-color: #C4AB7F;
 }
 .titulo__principal--servicios h1{
     font-size: 60px;
@@ -200,6 +183,7 @@ p{
 }
 .titulo__principal--servicios h2{
     font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .container__productos{
     display: flex;
@@ -212,7 +196,7 @@ p{
     border: #184B47 4px solid;
     transition: all .5s;
     margin: 7px 10px;
-    
+
 }
 
 .producto:hover{
@@ -255,7 +239,7 @@ iframe{
 
 .body__contacto{
     background-image: url(https://www.tuexpertomovil.com/wp-content/uploads/2022/01/25-fondos-de-pantalla-para-movil-de-naturaleza-para-2022.jpg);
-    background-size: cover; 
+    background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
     margin: 0;
@@ -303,61 +287,60 @@ textarea{
 
 footer{
     background-color: #184B47;
-    font-size: 19px;
     color: white;
-    padding: 42px;
-    height: 80px;
-    grid-area: footer;
-    margin-top: auto;
-}
-svg{
-    padding: 5px;
+    padding: 56px;
+    
 }
 
-.footer__content {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-
+.footer__content h5{
+    font-size: 15px;
+    /* font-weight: 600; preguntar al cliente*/
 }
+
 .footer__contacto{
-    padding-top: 15px;
-    padding-left: 10px;
+    padding-left: 45px;
 }
+
+.footer__contacto a{
+    text-decoration: none;
+}
+
+
+svg path{
+    color: black;    
+}
+
 .firma{
-    padding-right: 10px;
     text-align: right;
+    padding-right: 45px;
 }
 
 
-/* VISTA MOBILE */
+/* VISTA TABLET Y MOBILE */
 
 @media screen and (max-width:1200px) {
-    body{
+    /* body{
         padding-top: 126px;
-    }
+    } */
     nav{
         height: 90px;
     }
-    .logo{
+    .navbar-brand{
         margin-left: 50px;
-        font-size: 27px;
-    }
-    .link__page{
-        display: none;
     }
 
     /* index mobile */
 
     .titulo__index h1{
         font-size: 65px;
+        line-height: 2;
     }
     .titulo__index h2{
         font-size: 30px;
     }
     .presentacion-grid{
         display: grid;
-        grid-template-columns: auto 1fr auto;       
+        grid-template-columns: auto 1fr auto;
     }
     .foto__index{
         margin-left: 15px;
@@ -370,7 +353,7 @@ svg{
         margin-left: 10px;
         padding-right: 10px;
     }
-    
+
     .foto__info{
         height:350px;
         border: 4px solid black;
@@ -410,12 +393,16 @@ svg{
 
 }
 
-/* texto responsive */
+/* Vista solo Mobile */
 
 @media screen and (max-width:773px){
-    
+
+    .titulo__principal{
+        margin: 50px 10px;
+    }
+
     /* index */
-    
+
     .titulo__index h1{
         font-size: 50px;
     }
@@ -439,11 +426,20 @@ svg{
     .bio{
         font-size: 13px;
     }
-    
+
     .foto__info{
         height:250px;
         border: 4px solid black;
         border-radius: 10px;
+    }
+
+    /* productos */
+
+    .producto{
+        height: 300px;
+        border: #184B47 4px solid;
+        transition: all .5s;
+        margin: 7px 10px;
     }
 
 }
@@ -451,7 +447,7 @@ svg{
 /* VISTA DESKTOP */
 
 @media screen and (min-width:1200px){
-    
+
     .menu-burguer{
         display: none;
     }
@@ -459,6 +455,6 @@ svg{
         display: grid;
         grid-template-columns: 150px 1fr 150px;
     }
-   
+
 }
 
