@@ -31,7 +31,7 @@ nav{
 }
 
 .menu-desplegable{
-    background-color: #184B47;
+    background-color: #0F302D;
 }
 
 .navbar-brand{
@@ -57,7 +57,7 @@ nav{
     font-size: 16px;
     margin-right: 9px;
     transition: all .3s;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-link:hover{
@@ -70,7 +70,6 @@ nav{
 /* main */
 
 main{
-    grid-area: main;
     margin-bottom: 50px;
 }
 p{
@@ -114,10 +113,7 @@ p{
     margin-left: 10px;
     font-weight: 500;
 }
-.presentacion{
-    grid-area: presentacion;
-    grid-column: 2/3;
-}
+
 .presentacion p{
     text-align:center;
     margin: 40px;
@@ -180,6 +176,7 @@ p{
     font-size: 60px;
     font-family: 'Dancing Script';
     padding-bottom: 7px;
+    font-weight: 600;
 }
 .titulo__principal--servicios h2{
     font-size: 25px;
@@ -244,6 +241,7 @@ iframe{
     background-attachment: fixed;
     margin: 0;
     min-height: 93.4vh;
+    padding-top: 65px;
 }
 form{
     width:450px;
@@ -251,7 +249,6 @@ form{
     background: rgba(0, 0, 0, 0.4);
     padding: 10px 20px;
     box-sizing: border-box;
-    margin-top: 60px;
     border-radius: 7px;
     font-family: monospace;
 }
@@ -289,12 +286,11 @@ footer{
     background-color: #184B47;
     color: white;
     padding: 56px;
-    
+
 }
 
 .footer__content h5{
     font-size: 15px;
-    /* font-weight: 600; preguntar al cliente*/
 }
 
 .footer__contacto{
@@ -307,7 +303,7 @@ footer{
 
 
 svg path{
-    color: black;    
+    color: black;
 }
 
 .firma{
@@ -368,6 +364,12 @@ svg path{
         gap: 20px;
     }
 
+    .producto{
+        max-height: 450px;
+        height: 85vw;
+    }
+
+
     /* blog y herramientas mobile */
 
     .article__blog{
@@ -389,6 +391,34 @@ svg path{
 
     form{
         width: 75%;
+    }
+
+}
+
+/* large devices */
+
+@media (max-width: 992px){
+
+    .offcanvas-title{
+        margin-left: 15px;
+        color: #FFF1CE;
+    }
+
+    .offcanvas-body{
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    .navbar-nav{
+        grid-column: 2/3;
+        margin-right: 0%;
+        margin-top: 10px;
+    }
+
+    .nav-link{
+        border-radius: 40px;
+        margin-bottom: 25px;
+        margin-right: 0%;
     }
 
 }
@@ -433,14 +463,6 @@ svg path{
         border-radius: 10px;
     }
 
-    /* productos */
-
-    .producto{
-        height: 300px;
-        border: #184B47 4px solid;
-        transition: all .5s;
-        margin: 7px 10px;
-    }
 
 }
 
@@ -454,6 +476,10 @@ svg path{
     .presentacion-grid{
         display: grid;
         grid-template-columns: 150px 1fr 150px;
+    }
+    .presentacion{
+        grid-area: presentacion;
+        grid-column: 2/3;
     }
 
 }
