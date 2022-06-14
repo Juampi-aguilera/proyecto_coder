@@ -315,9 +315,6 @@ svg path{
 /* VISTA TABLET Y MOBILE */
 
 @media screen and (max-width:1200px) {
-    /* body{
-        padding-top: 126px;
-    } */
     nav{
         height: 90px;
     }
@@ -421,6 +418,18 @@ svg path{
         margin-right: 0%;
     }
 
+    /* sobre mi */
+
+    .bio{
+        font-size: 13px;
+    }
+
+    .foto__info{
+        height:250px;
+        border: 4px solid black;
+        border-radius: 10px;
+    }
+
 }
 
 /* Vista solo Mobile */
@@ -451,19 +460,49 @@ svg path{
         font-size: 23px;
     }
 
-    /* sobre mi */
 
-    .bio{
-        font-size: 13px;
+
+
+}
+
+@media screen and (max-width:600px){
+
+    /* margen logo */
+
+    .navbar-brand{
+        margin-left: 15px;
     }
 
-    .foto__info{
-        height:250px;
-        border: 4px solid black;
-        border-radius: 10px;
+    /* contacto */
+    
+    form{
+        width: 90%;
     }
+}
 
-
+@media screen and (max-width:400px){
+    
+    .footer__content h5{
+        font-size: 12px;
+    }
+    
+    .footer__contacto{
+        padding-left: 25px;
+    }
+    
+    .footer__contacto a{
+        text-decoration: none;
+    }
+    
+    
+    svg path{
+        color: black;
+    }
+    
+    .firma{
+        text-align: right;
+        padding-right: 25px;
+    }
 }
 
 /* VISTA DESKTOP */
