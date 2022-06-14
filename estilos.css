@@ -315,9 +315,6 @@ svg path{
 /* VISTA TABLET Y MOBILE */
 
 @media screen and (max-width:1200px) {
-    /* body{
-        padding-top: 126px;
-    } */
     nav{
         height: 90px;
     }
@@ -464,6 +461,25 @@ svg path{
     }
 
 
+}
+
+@media screen and (max-width:600px){
+
+    /* margen logo */
+
+    .navbar-brand{
+        margin-left: 15px;
+    }
+
+    /* contacto */
+    
+    form{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:350px){
+    
 }
 
 /* VISTA DESKTOP */
