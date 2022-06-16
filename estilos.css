@@ -11,6 +11,7 @@
 *{
     margin: 0;
     padding: 0;
+    /* overflow-x: hidden; */
 }
 body{
     background-color: #FFF1CE;
@@ -230,6 +231,8 @@ p{
 }
 iframe{
     margin: 10px 50px;
+    width:560px; 
+    height:315px;
 }
 
 /* contacto */
@@ -420,8 +423,12 @@ svg path{
 
     /* sobre mi */
 
+    .article__bio{
+        margin: 25px 20px;
+    }
+
     .bio{
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .foto__info{
@@ -460,7 +467,32 @@ svg path{
         font-size: 23px;
     }
 
+     /* sobre mi */
 
+    .article__bio{
+        margin: 25px 15px;
+    }
+
+    .foto__info{
+        height:200px;
+        border: 3px solid black;
+        border-radius: 10px;
+    }
+
+    /* blog */
+
+    .foto1__blog {
+        height: 200px;
+    }
+
+    .titulo2__blog {
+        margin-bottom: 20px;
+    }
+
+    iframe{
+        width:400px; 
+        height:225px;
+    }
 
 
 }
@@ -471,6 +503,23 @@ svg path{
 
     .navbar-brand{
         margin-left: 15px;
+    }
+
+    /* blog */
+
+    .foto1__blog {
+        display:none;
+    }
+
+    .titulo2__blog {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    iframe{
+        width:285px; 
+        height:170px;
+        overflow: hidden;
     }
 
     /* contacto */
