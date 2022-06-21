@@ -454,6 +454,10 @@ svg path {
     font-size: 23px;
   }
 
+  .foto__index {
+    margin-left: 0px;
+  }
+
   /* sobre mi */
   .article__bio {
     margin: 25px 15px;
@@ -535,7 +539,7 @@ svg path {
     padding-right: 25px;
   }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 330px) {
   .footer__contacto {
     padding-left: 15px;
   }
@@ -543,6 +547,10 @@ svg path {
   .firma {
     text-align: right;
     padding-right: 15px;
+  }
+
+  .foto__index {
+    height: 250px;
   }
 }
 /* VISTA DESKTOP */
