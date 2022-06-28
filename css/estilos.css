@@ -10,7 +10,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
 }
 
 body {
@@ -27,7 +26,6 @@ nav {
   font-size: 20px;
   padding: 18px;
   height: 81px;
-  /* z-index: 1000; */
 }
 
 .menu-desplegable {
@@ -53,7 +51,7 @@ nav {
   border: 2px solid;
   color: white;
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   margin-right: 9px;
   transition: all 0.3s;
   font-family: Arial, Helvetica, sans-serif;
@@ -104,6 +102,9 @@ p {
   text-shadow: 2px 2px white;
   text-align: left;
 }
+.titulo__index h1 .apellido {
+  display: inline-block;
+}
 .titulo__index h2 {
   padding-top: 60px;
   font-size: 35px;
@@ -126,9 +127,9 @@ p {
 .section__index {
   margin: 20px 60px;
   display: flex;
+  align-items: center;
   flex-flow: wrap row;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .formacion {
@@ -294,10 +295,11 @@ footer {
   background-color: #184B47;
   color: white;
   padding: 56px;
+  padding-bottom: 20px;
 }
 
 .footer__content h5 {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .footer__contacto {
@@ -307,13 +309,27 @@ footer {
   text-decoration: none;
 }
 
-svg path {
-  color: black;
+svg {
+  fill: #FFF1CE;
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  border-radius: 40%;
+  transition: 0.3s;
+}
+svg:hover {
+  background-color: #FFF1CE;
+  fill: #184B47;
 }
 
 .firma {
   text-align: right;
   padding-right: 45px;
+}
+
+#copyright {
+  text-align: center;
+  padding-top: 35px;
 }
 
 /* VISTA TABLET Y MOBILE */
@@ -473,10 +489,10 @@ svg path {
 
   .fotos__info--mobile {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
-    align-items: center;
   }
   .fotos__info--mobile .foto__info--mobile:first-child {
     width: 190px;
@@ -535,40 +551,25 @@ svg path {
     width: 90%;
   }
 }
+@media screen and (max-width: 576px) {
+  /* footer */
+  .footer__contacto {
+    padding-left: 25px;
+  }
+
+  .firma {
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 18px;
+  }
+}
 @media screen and (max-width: 400px) {
   /* blog */
   iframe {
     margin: 10px 30px;
   }
-
-  /* footer */
-  .footer__content h5 {
-    font-size: 12px;
-  }
-
-  .footer__contacto {
-    padding-left: 25px;
-  }
-
-  svg path {
-    color: black;
-  }
-
-  .firma {
-    text-align: right;
-    padding-right: 25px;
-  }
 }
 @media screen and (max-width: 330px) {
-  .footer__contacto {
-    padding-left: 15px;
-  }
-
-  .firma {
-    text-align: right;
-    padding-right: 15px;
-  }
-
   .foto__index {
     height: 250px;
   }

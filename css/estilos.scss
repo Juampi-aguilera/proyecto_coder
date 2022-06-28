@@ -3,6 +3,19 @@
 $color__primario:#FFF1CE;
 $color__secundario:#184B47;
 
+//map
+
+$padding:(
+    footer:45px,
+);
+
+//mixin
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
 //scss
 
 @font-face {
@@ -18,7 +31,6 @@ $color__secundario:#184B47;
 *{
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
 }
 body{
     background-color: $color__primario;
@@ -34,8 +46,6 @@ nav{
     font-size: 20px;
     padding: 18px;
     height: 81px;
-
-    /* z-index: 1000; */
 }
 
 .menu-desplegable{
@@ -62,7 +72,7 @@ nav{
     border: 2px solid;
     color: white;
     text-align: center;
-    font-size: 16px;
+    font-size: 17px;
     margin-right: 9px;
     transition: all .3s;
     font-family: Arial, Helvetica, sans-serif;
@@ -112,6 +122,9 @@ p{
         font-family: 'Amsterdam One';
         text-shadow: 2px 2px white;
         text-align: left;
+        .apellido{
+            display: inline-block;
+        }
     }
     h2{
         padding-top: 60px;
@@ -121,7 +134,6 @@ p{
         font-weight: 500;
     }
 }
-
 
 .presentacion p{
     text-align:center;
@@ -136,10 +148,9 @@ p{
 
 .section__index{
     margin: 20px 60px;
-    display: flex;
+    @include flex-center;
     flex-flow: wrap row;
     justify-content: space-evenly;
-    align-items: center;
 }
 .formacion{
     text-align: justify;
@@ -156,8 +167,7 @@ p{
 
 .article__bio{
     margin: 20px 60px;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     max-height: 630px;
 }
 .bio{
@@ -216,8 +226,7 @@ p{
 
 .article__blog{
     margin: 20px 60px;
-    display: flex;
-    align-items: center;
+    @include flex-center;
 }
 .foto1__blog{
     height:330px;
@@ -273,7 +282,7 @@ form{
     }
 }
 
-input, textarea{
+input{
     width: 100%;
     margin-bottom: 20px;
     padding: 7px;
@@ -282,6 +291,7 @@ input, textarea{
     border: none;
 }
 textarea{
+    @extend input;
     min-height: 100px;
     max-height: 300px;
     max-width: 100%;
@@ -300,26 +310,41 @@ footer{
     background-color: $color__secundario;
     color: white;
     padding: 56px;
+    padding-bottom: 20px;
 }
 
 .footer__content h5{
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .footer__contacto{
-    padding-left: 45px;
+    padding-left: map-get($padding, footer);
     a{
         text-decoration: none;
     }
 }
 
-svg path{
-    color: black;
+svg{
+    fill: $color__primario;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    border-radius: 40%;
+    transition: 0.3s;
+    &:hover{
+        background-color: $color__primario;
+        fill: $color__secundario;
+    }
 }
 
 .firma{
     text-align: right;
-    padding-right: 45px;
+    padding-right: map-get($padding, footer);
+}
+
+#copyright{
+    text-align: center;
+    padding-top: 35px;
 }
 
 
@@ -494,11 +519,10 @@ svg path{
     }
 
     .fotos__info--mobile{
-        display: flex;
+        @include flex-center;
         flex-wrap: wrap;
         gap: 20px;
         justify-content: space-evenly; 
-        align-items: center;
         .foto__info--mobile:first-child{
             width: 190px;
             height: auto;
@@ -566,6 +590,22 @@ svg path{
     }
 }
 
+@media screen and (max-width:576px) {
+
+    /* footer */
+    
+    .footer__contacto{
+        padding-left: 25px;
+    }    
+    
+    .firma{
+        text-align: left;
+        padding-left: 25px;
+        padding-top: 18px;
+    }
+
+}
+
 @media screen and (max-width:400px){
 
     /* blog */
@@ -574,34 +614,9 @@ svg path{
         margin: 10px 30px;
     }
 
-    /* footer */
-    
-    .footer__content h5{
-        font-size: 12px;
-    }
-    
-    .footer__contacto{
-        padding-left: 25px;
-    }    
-    
-    svg path{
-        color: black;
-    }
-    
-    .firma{
-        text-align: right;
-        padding-right: 25px;
-    }
 }
 
 @media screen and (max-width:330px){
-    .footer__contacto{
-        padding-left: 15px;
-    }    
-    .firma{
-        text-align: right;
-        padding-right: 15px;
-    }
 
     .foto__index{
         height: 250px;
