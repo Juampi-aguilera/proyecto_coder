@@ -5,6 +5,7 @@
 
 $color__primario:#EDE6DB;
 $color__secundario:#1A3C40;
+$color__terciario:#EFDFBF;
 
 //map
 
@@ -107,7 +108,7 @@ p{
     padding: 50px;
     padding-top: 40px;
     border-radius: 10px;
-    background-color: #EFDFBF;
+    background-color: $color__terciario;
     font-weight: 600;
 }
 .btn-wsp{
@@ -563,7 +564,7 @@ footer{
 
     .color__fondo--bio{
         display: inline-block;
-        background-color: #FFDEAD;
+        background-color: $color__terciario;
         margin: 0%;
         padding: 25px 15px;
     }
