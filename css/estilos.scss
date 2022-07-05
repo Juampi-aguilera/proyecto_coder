@@ -318,6 +318,10 @@ input{
     box-sizing: border-box;
     font-size: 17px;
     border: none;
+    outline:none;
+    &:focus{
+        outline: 2px solid $color__secundario;
+    }
 }
 textarea{
     @extend input;
@@ -374,6 +378,7 @@ footer{
 #copyright{
     text-align: center;
     padding-top: 35px;
+    font-size: 15px;
 }
 
 
@@ -607,8 +612,8 @@ footer{
     }
 
     iframe{
-        width:285px; 
-        height:170px;
+        width:70vw; 
+        height:40vw;
         overflow: hidden;
     }
 
@@ -637,10 +642,35 @@ footer{
 
 @media screen and (max-width:400px){
 
+    /* index */
+
+    .titulo__index{
+        padding-left: 15px;
+        h2{
+            margin-left: 0%;
+        }
+    }
+
     /* blog */
+
+    .titulo__principal--blog{
+        font-size: 50px;
+        padding: 30px;
+        padding-top: 40px;
+    }
 
     iframe{
         margin: 10px 30px;
+    }
+
+    /* footer */
+
+    .footer__content h5 {
+        font-size: 15px;
+    }
+
+    #copyright{
+        font-size: 13px;
     }
 
 }
