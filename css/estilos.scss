@@ -685,10 +685,7 @@ footer{
 /* VISTA DESKTOP */
 
 @media screen and (min-width:1200px){
-
-    .menu-burguer{
-        display: none;
-    }
+    
     .presentacion-grid{
         display: grid;
         grid-template-columns: 150px 1fr 150px;
